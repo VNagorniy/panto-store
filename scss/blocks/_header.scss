@@ -3,4 +3,6 @@
     background-image: url('./../img/header/header-bg.jpg');
     background-size: cover;
     aspect-ratio: 1440 / 1084;
+
+    @include retina-bg(url('./../img/header/header-bg@2x.jpg'))
 }
