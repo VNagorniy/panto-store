@@ -119,6 +119,7 @@ html, body {
 }
 
 .header {
+  position: relative;
   padding-top: 40px;
   background-color: var(--footer-bg);
   background-image: url("./../img/header/header-bg.jpg");
@@ -155,12 +156,42 @@ html, body {
 .header__content p {
   margin: 0 auto;
   max-width: 606px;
+  opacity: 0.8;
   font-size: 24px;
   line-height: 160%; /* 38.4px */
 }
 
 .header__search {
   margin: 45px auto 0;
+}
+
+/* Dots */
+.header__dot-sofa {
+  position: absolute;
+  left: 20.9929078014%;
+  top: 63.7209302326%;
+  -webkit-transform: translate(-16px, -16px);
+          transform: translate(-16px, -16px);
+}
+
+.header__dot-vase {
+  position: absolute;
+  left: 7.9166666667%;
+  top: 69.557195572%;
+  -webkit-transform: translate(-16px, -16px);
+          transform: translate(-16px, -16px);
+}
+
+.header__dot-item {
+  position: absolute;
+  left: 56.25%;
+  top: 72.6014760148%;
+}
+
+.header__dot-wall {
+  position: absolute;
+  right: 3.2624113475%;
+  top: 76.3720930233%;
 }
 
 .nav {
@@ -240,7 +271,7 @@ html, body {
 .search-form__input {
   color: #FFF;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 150%; /* 27px */
 }
 .search-form__input::-webkit-input-placeholder {
@@ -269,4 +300,65 @@ html, body {
   height: 40px;
   border-radius: 24px;
   background: var(--accent);
+}
+
+.info-dot {
+  position: relative;
+  cursor: pointer;
+}
+
+.info-dot__circle {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.info-dot__radius {
+  width: 32px;
+  height: 32px;
+  border: 0.86px solid #fff;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  -webkit-animation: pulse 1s infinite alternate;
+          animation: pulse 1s infinite alternate;
+}
+
+.info-dot:hover .info-dot__radius {
+  -webkit-animation: pulse 1s infinite alternate paused;
+          animation: pulse 1s infinite alternate paused;
+}
+
+.info-dot:hover .info-dot__circle {
+  background-color: orange;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }/*# sourceMappingURL=main.css.map */
