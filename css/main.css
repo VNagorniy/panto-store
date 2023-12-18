@@ -477,12 +477,6 @@ body {
 
 .products__slider {
   margin-bottom: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .products__link {
@@ -666,10 +660,6 @@ body {
 
 .slider {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 42px;
 }
 
 .slider__btn {
@@ -692,6 +682,7 @@ body {
 
 .slider__btn--prev {
   position: absolute;
+  z-index: 1;
   left: 0;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -700,6 +691,7 @@ body {
 
 .slider__btn--next {
   position: absolute;
+  z-index: 1;
   right: 0;
   top: 50%;
   -webkit-transform: translate(50%, -50%);
