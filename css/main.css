@@ -555,6 +555,9 @@ body {
 .tab-controls__btn--active {
   background-color: #FFF;
 }
+.tab-controls__btn--active:hover {
+  background-color: #FFF;
+}
 
 .card {
   position: relative;
