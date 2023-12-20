@@ -4,6 +4,11 @@
     align-items: center;
     background: #EEE;
     border-radius: 44px;
+
+    @include mobile() {
+        max-width: 300px;
+        overflow-x: scroll;
+    }
 }
 
 .tab-controls__btn {
