@@ -5,6 +5,13 @@ const infoHints = document.querySelectorAll('.info-hint');
 for (let btn of infoBtns) {
   btn.addEventListener('click', function (e) {
     e.stopPropagation();
+
+    // Hide all hint
+    for (let hint of infoHints) {
+      hint.classList.add('none');
+    }
+
+    // Show current hint
     this.parentNode.querySelector('.info-hint').classList.toggle('none');
   });
 }
