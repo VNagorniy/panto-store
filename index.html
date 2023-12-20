@@ -42,9 +42,11 @@
                                 <img class="cart__img" src="./img/icons/cart.svg" alt="cart"></img>
                                 <div class="cart__count">0</div>
                             </a>
+
+                            <button class='nav__btn'><img src="./img/icons/mobile-nav.svg" alt="Open navigation"></button>
                 </nav>     
                 
-                <div class="header__content">
+                <div class="header__content none">
                     <h1 class="header__title"> Make your interior more minimalistic & modern</h1>
                     <p>Turn your room with panto into a lot more minimalist and modern with ease and speed</p>
 
@@ -56,7 +58,7 @@
                     </form>   
                 </div> 
 
-                <div class="header__dot-sofa">
+                <div class="header__dot-sofa none">
                     <button class="info-dot">
                         <div class="info-dot__circle"></div>
                         <div class="info-dot__radius"></div>
@@ -81,7 +83,7 @@
                     </div>
                 </div>
 
-                <div class="header__dot-vase">
+                <div class="header__dot-vase none">
                     <button class="info-dot">
                         <div class="info-dot__circle"></div>
                         <div class="info-dot__radius"></div>
@@ -106,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="header__dot-item">
+                <div class="header__dot-item none">
                     <button class="info-dot">
                         <div class="info-dot__circle"></div>
                         <div class="info-dot__radius"></div>
@@ -131,7 +133,7 @@
                     </div>
                 </div>
 
-                <div class="header__dot-wall">
+                <div class="header__dot-wall none">
                     <button class="info-dot">
                         <div class="info-dot__circle"></div>
                         <div class="info-dot__radius"></div>
@@ -156,9 +158,48 @@
                     </div>
                 </div>
             </div>
+
+            <div class="mobile-nav-wrapper">
+
+                <div class="mobile-nav-header">
+                    <a href="#cart" class="mobile-cart">
+                        <div href="#!" class="cart">
+                            <img class="cart__img" src="./img/icons/cart.svg" alt="cart"></img>
+                            <div class="cart__count">0</div>
+                        </div>
+                    </a>
+
+                    <button class="mobile-nav-btn-close">
+                        <img src="./img/icons/close.svg" alt="Close navigation">
+                    </button>
+                </div>
+
+                <ul class="mobile-nav">
+                    <li class="mobile-nav__item">
+                        <a href="#furniture" class="mobile-nav__link mobile-nav__link--dropdown">Furniture</a>
+                        <ul class="mobile-sub-nav">
+                            <li class="mobile-sub-nav__item"><a href="#!" class="mobile-sub-nav__link">Home</a></li>
+                            <li class="mobile-sub-nav__item"><a href="#!" class="mobile-sub-nav__link">Services</a></li>
+                            <li class="mobile-sub-nav__item"><a href="#!" class="mobile-sub-nav__link">Products</a></li>
+                            <li class="mobile-sub-nav__item"><a href="#!" class="mobile-sub-nav__link">Contacts</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#!" class="mobile-nav__link">Shop</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#!" class="mobile-nav__link">About Us</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#!" class="mobile-nav__link">Contact</a>
+                    </li>
+                </ul>
+            </div>         
         </header>
 
-        <section class="benefits">
+        
+
+        <section class="benefits none">
             <div class="container">
                 <div class="benefits__grid">
                     <h2 class="benefits__title">Why Choosing Us</h2>
@@ -183,7 +224,7 @@
             </div>
         </section>
 
-        <section class="products">
+        <section class="products none">
             <div class="container">
                 <h2 class="products__title">Best Selling Product</h2>
                 <div class="products__tabs">
@@ -568,7 +609,7 @@
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="footer none">
             <div class="container container--small">
                 <div class="footer__grid">
                     <div class="footer__desc">
