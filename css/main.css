@@ -144,7 +144,7 @@ html, body {
 }
 
 .header__nav {
-  margin-bottom: 86px;
+  margin-bottom: clamp(20px, 0.071rem + 5.89vw, 86px);
 }
 
 .header__content {
@@ -154,7 +154,8 @@ html, body {
 .header__title {
   margin-bottom: 14px;
   font-weight: 700;
-  font-size: 80px;
+  font-size: clamp(28px, 0.821rem + 4.64vw, 80px);
+  text-wrap: balance;
   line-height: 130%; /* 104px */
   letter-spacing: -0.8px;
   text-transform: capitalize;
@@ -164,46 +165,58 @@ html, body {
   margin: 0 auto;
   max-width: 606px;
   opacity: 0.8;
-  font-size: 24px;
+  font-size: clamp(16px, 0.857rem + 0.71vw, 24px);
   line-height: 160%; /* 38.4px */
+  text-wrap: balance;
 }
 
 .header__search {
+  display: inline-block;
   margin: 45px auto 0;
+}
+@media (max-width: 819px) {
+  .header__search {
+    display: none;
+  }
 }
 
 /* Dots */
-.header__dot-sofa {
+.header__dot {
   position: absolute;
+}
+@media (max-width: 819px) {
+  .header__dot {
+    display: none;
+  }
+}
+
+.header__dot--sofa {
   left: 20.5555555556%;
   top: 63.1918819188%;
 }
 
-.header__dot-vase {
-  position: absolute;
+.header__dot--vase {
   left: 7.9166666667%;
   top: 69.557195572%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.header__dot-item {
-  position: absolute;
+.header__dot--item {
   left: 56.25%;
   top: 72.6014760148%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.header__dot-wall {
-  position: absolute;
+.header__dot--wall {
   right: 3.1944444444%;
   top: 75.7380073801%;
 }
 
 .logo {
   font-weight: 700;
-  font-size: 28px;
+  font-size: clamp(18px, 0.946rem + 0.89vw, 28px);
   letter-spacing: 0.28px;
   text-transform: capitalize;
   color: #fff !important;
