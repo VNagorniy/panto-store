@@ -36,24 +36,23 @@ const swiper = new Swiper('.swiper', {
   loop: true,
   freeMode: true,
 
-  slidesPerView: 4,
+  slidesPerView: 1,
   paceBetween: 42,
 
-  // breakpoints: {
-  //   640: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  //   768: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 40,
-  //   },
-  //   1024: {
-  //     slidesPerView: 5,
-  //     spaceBetween: 50,
-  //   },
-  // },
-
+  breakpoints: {
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    920: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1230: {
+      slidesPerView: 4,
+      spaceBetween: 42,
+    },
+  },
 
   // Navigation arrows
   navigation: {
@@ -62,46 +61,44 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-
 //Tabs
 
-const tabsBtns = document.querySelectorAll('[data-tab]')
-const tabsProducts = document.querySelectorAll('[data-tab-value]')
+const tabsBtns = document.querySelectorAll('[data-tab]');
+const tabsProducts = document.querySelectorAll('[data-tab-value]');
 
 for (let btn of tabsBtns) {
-  btn.addEventListener('click', function() {
+  btn.addEventListener('click', function () {
     for (let btn of tabsBtns) {
-      btn.classList.remove('tab-controls__btn--active')
+      btn.classList.remove('tab-controls__btn--active');
     }
 
-    this.classList.add('tab-controls__btn--active')
+    this.classList.add('tab-controls__btn--active');
 
     for (let product of tabsProducts) {
-      if(this.dataset.tab === 'all') {
+      if (this.dataset.tab === 'all') {
         product.classList.remove('none');
       } else {
-        if(product.dataset.tabValue === this.dataset.tab) {
+        if (product.dataset.tabValue === this.dataset.tab) {
           product.classList.remove('none');
         } else {
           product.classList.add('none');
         }
-      }   
+      }
     }
 
-  swiper.update()
-  })
-} 
+    swiper.update();
+  });
+}
 
 // Mobile Nav
 const mobileNavOpenBtn = document.querySelector('#open-mobile-nav-btn');
 const mobileNavCloseBtn = document.querySelector('#close-mobile-nav-btn');
 const mobileNav = document.querySelector('#mobile-nav');
 
+mobileNavOpenBtn.onclick = function () {
+  mobileNav.classList.add('mobile-nav-wrapper--open');
+};
 
-mobileNavOpenBtn.onclick = function (){
-  mobileNav.classList.add('mobile-nav-wrapper--open')
-} 
-
-mobileNavCloseBtn.onclick = function (){
-  mobileNav.classList.remove('mobile-nav-wrapper--open')
-} 
+mobileNavCloseBtn.onclick = function () {
+  mobileNav.classList.remove('mobile-nav-wrapper--open');
+};
