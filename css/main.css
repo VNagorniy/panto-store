@@ -126,6 +126,7 @@ html, body {
 }
 
 .header {
+  position: relative;
   padding-top: 40px;
   background-color: var(--footer-bg);
   background-image: url("./../img/header/header-bg.jpg");
@@ -864,6 +865,7 @@ html, body {
 .mobile-nav-wrapper {
   display: none;
   position: absolute;
+  z-index: 9;
   right: 0;
   top: 0;
   bottom: 0;
@@ -871,6 +873,14 @@ html, body {
   padding: 30px 30px;
   background-color: var(--footer-bg);
   color: var(--footer-text-color);
+}
+.mobile-nav-wrapper a {
+  color: var(--footer-text-color);
+  -webkit-transition: color 0.1s ease-in;
+  transition: color 0.1s ease-in;
+}
+.mobile-nav-wrapper a:hover {
+  color: #FFF;
 }
 .mobile-nav-wrapper--open {
   display: block;
